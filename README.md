@@ -1,2 +1,1 @@
-# Сайт AGScratcherBest
-Его можно найти [здесь](https://agscratcherbest.codeberg.page/) или [здесь](https://agscratcherbest.github.io/). Не важно где смотреть, будет один и тот же сайт.
+Это исходный код сайта AGScratcherBest. Сам сайт можно найти [здесь](https://agscratcherbest.codeberg.page/). Если у Вас Codeberg заблокирован или Вы предпочитаете на GitHub смотреть, то версию на GitHub можно найти [здесь](https://agscratcherbest.github.io/). Обычно GitHub-версия ничем не отличается от Codeberg-ной, т. к. эта репозитория имеет двухстороннее зеркало (то есть сделал правки в GitHub — появились в Codeberg и наоборот).
