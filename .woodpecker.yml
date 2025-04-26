@@ -1,0 +1,8 @@
+pipeline:
+  mirror:
+    image: alpine/git
+    commands:
+      - git config --global user.email "woodpecker@codeberg.org"
+      - git config --global user.name "Woodpecker"
+      - git remote add github "https://${GH_USERNAME}:${GH_TOKEN}@github.com/${GH_USERNAME}/AGScratcherBest.github.io.git"
+      - git push --mirror github
