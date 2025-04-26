@@ -1,0 +1,23 @@
+name: Mirror GitHub -> Codeberg via HTTPS
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # чтобы видеть все коммиты/теги
+
+      - name: Push to Codeberg
+        env:
+          CODEBERG_TOKEN: ${{ secrets.CODEBERG_TOKEN }}
+          CODEBERG_USERNAME: ${{ secrets.CODEBERG_USERNAME }}
+        run: |
+          git remote add codeberg "https://${CODEBERG_USERNAME}:${CODEBERG_TOKEN}@codeberg.org/${CODEBERG_USERNAME}/pages.git"
+          git push --mirror codeberg
