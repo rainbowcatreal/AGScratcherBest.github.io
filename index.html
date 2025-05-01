@@ -2,6 +2,33 @@
 <html>
   <head>
     <title>AGScratcherBest</title>
+    <style>
+      .container {
+        font-family: sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* для браузеров, не понимающих что за dvh вообще */
+        height: 100dvh;
+        flex-direction: column;
+        color: #223640;
+        text-shadow: 0 0 10px #83d3f9aa;
+      }
+      img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.75);
+        z-index: -1;
+        opacity: 0.25;
+        filter: drop-shadow(0 0 10px #83d3f9);
+      }
+    </style>
   </head>
-  <body><h1>Тест!!!</h1><s>Протест</s></body>
-</html>
+  <body>
+    <img src="https://agscratcherbest.codeberg.page/files/AGScratcherBest.png">
+    <div class="container">
+      <h1>AGScratcherBest</h1>
+      <span class="description">Скретчер.</span>
+    </div>
+  </body>
